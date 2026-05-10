@@ -1,5 +1,10 @@
 class Solution {
     public int[] topKFrequent(int[] nums, int k) {
+        /*
+        Tc & Sc = O(N) If we use MinHeap then TC will become O(N)
+        Each number in the array appears a certain number of times, and the maximum possible frequency is the length of the array.
+We can use this idea by creating a list where the index represents a frequency, and at each index we store all numbers that appear exactly that many times.
+            */
         int n = nums.length;
         HashMap<Integer,Integer> freqMap = new HashMap<>();
         List<Integer>[] bucket = new List[n+1];
